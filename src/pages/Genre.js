@@ -47,7 +47,7 @@ export default function Genre() {
           </Link>
 
           <p className="hero__eyebrow">
-            {flag} {lang.charAt(0).toUpperCase() + lang.slice(1)} Books
+            {flag} Türkçe Kitaplar
           </p>
 
           <h1 className="page-hero__title">
