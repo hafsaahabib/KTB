@@ -113,7 +113,7 @@ export default function Upload() {
           </div>
 
           <h1 className="page-hero__title">
-            {displayGenre}<br /><em>{displayLang} Kitapları</em>
+            {displayGenre}<br /><em>Türkçe Kitapları</em>
           </h1>
 
           <p className="page-hero__sub">
