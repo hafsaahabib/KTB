@@ -3,13 +3,13 @@ import { Link, useParams } from 'react-router-dom';
 import Navbar from '../Navbar';
 
 const GENRES = [
-  { code: 'tefsir', label: 'Tefsir', icon: '🕌'},
-  { code: 'hadis', label: 'Hadis', icon: '📜'},
-  { code: 'siyer', label: 'Siyer', icon: '🕋'},
-  { code: 'kelam', label: 'Kelam', icon: '📖'},
-  { code: 'felsefe', label: 'Felsefe', icon: '🧠'},
-  { code: 'Fıkıh', label: 'Fıkıh', icon: '⚖️'},
-  { code: 'tasavvuf', label: 'Tasavvuf', icon: '🕊️🌿'},
+  { code: 'tefsir', label: 'Tefsir', icon: '🕌', desc: 'Explanations and interpretations of the Qur’an'},
+  { code: 'hadis', label: 'Hadis', icon: '📜', desc: 'Sayings and teachings of Prophet Muhammad'},
+  { code: 'siyer', label: 'Siyer', icon: '🕋', desc: 'The life and biography of Prophet Muhammad'},
+  { code: 'kelam', label: 'Kelam', icon: '📖', desc: 'The study of Islamic theology and beliefs'},
+  { code: 'felsefe', label: 'Felsefe', icon: '🧠', desc: 'Philosophical thinking about existence and knowledge'},
+  { code: 'Fıkıh', label: 'Fıkıh', icon: '⚖️', desc: 'Islamic jurisprudence and practical rulings'},
+  { code: 'tasavvuf', label: 'Tasavvuf', icon: '🕊️🌿', desc:'Spiritual purification and inner journey in Islam'},
 ];
 
 const FLAG_MAP = {
