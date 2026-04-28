@@ -3,18 +3,13 @@ import { Link } from 'react-router-dom';
 import Navbar from '../Navbar';
 
 const LANGUAGES = [
-  { code: 'english',    label: 'English',    flag: '🇬🇧', books: '2.4k+', desc: 'The world\'s most widely published language.' },
-  { code: 'turkish',   label: 'Türkçe',     flag: '🇹🇷', books: '890+',  desc: 'Rich literary heritage from Anatolia and beyond.' },
-  { code: 'german',    label: 'Deutsch',    flag: '🇩🇪', books: '1.1k+', desc: 'Home to Goethe, Kafka, and modern classics.' },
-  { code: 'french',    label: 'Français',   flag: '🇫🇷', books: '980+',  desc: 'Literature, philosophy, and timeless romance.' },
-  { code: 'arabic',    label: 'العربية',    flag: '🇸🇦', books: '760+',  desc: 'Ancient poetry to contemporary narratives.' },
-  { code: 'spanish',   label: 'Español',    flag: '🇪🇸', books: '1.3k+', desc: 'Magical realism and vibrant storytelling.' },
-  { code: 'italian',   label: 'Italiano',   flag: '🇮🇹', books: '670+',  desc: 'Dante to Eco — a literary tradition like no other.' },
-  { code: 'japanese',  label: '日本語',     flag: '🇯🇵', books: '540+',  desc: 'Manga, haiku, and literary masterpieces.' },
-  { code: 'russian',   label: 'Русский',    flag: '🇷🇺', books: '820+',  desc: 'Tolstoy, Dostoevsky, and great novels.' },
-  { code: 'portuguese',label: 'Português',  flag: '🇵🇹', books: '590+',  desc: 'Fado in words — melancholic and beautiful.' },
-  { code: 'chinese',   label: '中文',       flag: '🇨🇳', books: '710+',  desc: 'Ancient wisdom meets contemporary fiction.' },
-  { code: 'korean',    label: '한국어',     flag: '🇰🇷', books: '430+',  desc: 'From folklore to K-lit wave.' },
+{ code: 'russian', label: 'Русский', flag: '🇷🇺', books: '820+', desc: 'Tolstoy, Dostoyevski ve büyük romanların dili.' },
+{ code: 'turkish',  label: 'Türkçe',  flag: '🇹🇷', books: '890+', desc: 'Anadolu ve ötesinden zengin edebi miras.' },
+{ code: 'kyrgyz',   label: 'Кыргызча', flag: '🇰🇬', books: '210+', desc: 'Destanlar ve Orta Asya sözlü anlatı geleneği.' },
+{ code: 'tajik',    label: 'Тоҷикӣ',  flag: '🇹🇯', books: '190+', desc: 'Fars edebiyatı ve kültürel mirasın dili.' },
+{ code: 'kazakh',   label: 'Қазақша', flag: '🇰🇿', books: '240+', desc: 'Bozkır kültürü ve epik hikâyeler.' },
+{ code: 'uzbek',    label: 'Oʻzbekcha', flag: '🇺🇿', books: '260+', desc: 'Timur mirası ve modern Orta Asya edebiyatı.' },
+{ code: 'turkmen',  label: 'Türkmençe', flag: '🇹🇲', books: '180+', desc: 'Göçebe kültür ve halk hikâyeleri.' },
 ];
 
 export default function Language() {
@@ -33,9 +28,9 @@ export default function Language() {
 
       <section className="page-hero page-hero--lang">
         <div className="page-hero__content">
-          <p className="hero__eyebrow">Browse by Language</p>
-          <h1 className="page-hero__title">Choose Your<br /><em>Language</em></h1>
-          <p className="page-hero__sub">Discover books in your native tongue or explore a new one.</p>
+          {/* <p className="hero__eyebrow">Dile Göre Göz At</p> */}
+          <h1 className="page-hero__title">Dilini <br /><em>Seç</em></h1>
+          <p className="page-hero__sub">Kitapları ana dilinde keşfet veya yeni bir dil keşfet.</p>
         </div>
       </section>
 
@@ -63,9 +58,9 @@ export default function Language() {
       </section>
       
       <footer className="footer">
-        <div className="footer__brand">KTB</div>
-        <p className="footer__copy">© 2026 DIJITAL KITABISTAN. Built with ❤️ for readers everywhere.</p>
-        <a href="mailto:contact@KTB.com" className="footer__email">contact@KTB.com</a>
+            <div className="footer__brand">KTB</div>
+            <p className="footer__copy">© 2026 DIJITAL KITABISTAN. Dünyanın her yerindeki okurlar için ❤️ ile hazırlandı.</p>
+            <a href="mailto:contact@KTB.com" className="footer__email">contact@KTB.com</a>
       </footer>
     </div>
   );
