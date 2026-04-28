@@ -48,16 +48,16 @@ export default function Home() {
       <section className="hero" ref={heroRef}>
         <div className="hero__noise" />
         <div className="hero__content">
-          <p className="hero__eyebrow">Your Digital Library</p>
+          <p className="hero__eyebrow">...</p>
+         
           <h1 className="hero__title">
-            Every Story<br />
-            <em>Deserves a Home</em>
+            Geçmişin Kadim Bilgeliği,<br />
+            <em> Geleceğin Dijital Hafızasına Emanet!</em>
           </h1>
           <p className="hero__sub">
-            Upload, share, and discover books across languages and genres — all in one place.
-          </p>
+          Farklı dillerde ve türlerde kitapları keşfedin — hepsi tek bir yerde.          </p>
           <Link to="/language" className="btn btn--primary">
-            Get Started
+            Başlayın
             <span className="btn__arrow">→</span>
           </Link>
         </div>
@@ -68,15 +68,15 @@ export default function Home() {
             <span>🇹🇷</span><p>Türkçe</p>
           </div>
           <div className="hero__card hero__card--2">
-            <span>🇬🇧</span><p>English</p>
+            <span>🇰🇬</span><p>Кыргызча</p>
           </div>
           <div className="hero__card hero__card--3">
-            <span>🇩🇪</span><p>Deutsch</p>
+            <span>🇺🇿</span><p>Oʻzbekcha</p>
           </div>
         </div>
 
         <div className="hero__scroll-hint">
-          <span>Scroll</span>
+          <span>Kaydırın</span>
           <div className="hero__scroll-line" />
         </div>
       </section>
@@ -84,19 +84,19 @@ export default function Home() {
       {/* ── STATS STRIP ── */}
       <div className="stats-strip">
         <div className="stats-strip__item">
-          <strong>12+</strong><span>Languages</span>
+          <strong>5+</strong><span>Diller</span>
         </div>
         <div className="stats-strip__divider" />
         <div className="stats-strip__item">
-          <strong>5+</strong><span>Genres</span>
+          <strong>12+</strong><span>Türler</span>
         </div>
         <div className="stats-strip__divider" />
         <div className="stats-strip__item">
-          <strong>∞</strong><span>Books to Discover</span>
+          <strong>∞</strong><span>Keşfedilecek Kitaplar</span>
         </div>
         <div className="stats-strip__divider" />
         <div className="stats-strip__item">
-          <strong>Free</strong><span>Always</span>
+          <strong>Ücretsiz</strong><span>Her Zaman</span>
         </div>
       </div>
 
@@ -105,40 +105,40 @@ export default function Home() {
         <div className="about__bg-text">KTB</div>
 
         <div className="about__header reveal">
-          <div className="about__tag">Our Story</div>
+          <div className="about__tag">Hikâyemiz</div>
           <h2 className="about__title">
-            Built for readers,<br />by readers.
+            Okurlar için,<br />okurlar tarafından inşa edildi.
           </h2>
         </div>
 
         <div className="about__grid">
           <div className="about__card reveal">
             <div className="about__card-icon">📖</div>
-            <h3>Open Access</h3>
+            <h3>Açık Erişim</h3>
             <p>
-              We believe knowledge should be free and borderless. KTB is a
-              community-driven platform where anyone can share and access books
-              without paywalls or restrictions.
+             Bilginin ücretsiz ve sınırsız olması gerektiğine inanıyoruz. 
+             KTB, herkesin kitapları herhangi bir ücret veya kısıtlama olmadan 
+             erişebildiği, topluluk odaklı bir platformdur.
             </p>
           </div>
 
           <div className="about__card about__card--accent reveal">
             <div className="about__card-icon">🌍</div>
-            <h3 style={{color: 'whitesmoke'}}>Multilingual First</h3>
+            <h3 style={{color: 'whitesmoke'}}>Çok Dilli Öncelik</h3>
             <p style={{color: 'whitesmoke'}}>
-              From Turkish to Japanese, Arabic to German — KTB celebrates
-              linguistic diversity. Every language deserves a shelf, and every
-              reader deserves a book in their mother tongue.
+            KTB dil çeşitliliğini kutlar. 
+            Her dil bir rafı hak eder ve her okur kendi ana dilinde bir kitabı hak 
+            eder.
             </p>
           </div>
 
           <div className="about__card reveal">
             <div className="about__card-icon">🤝</div>
-            <h3>Community Driven</h3>
+            <h3>Topluluk Odaklı</h3>
             <p>
-              KTB grows with its readers. Upload a book today and it becomes
-              available for someone across the world tomorrow. Every contribution
-              matters.
+            KTB okurlarıyla birlikte büyür. Bugün bir kitap yüklenir, 
+            yarın dünyanın başka bir yerindeki biri ona erişebilir.
+            Her katkı önemlidir.
             </p>
           </div>
         </div>
@@ -146,24 +146,23 @@ export default function Home() {
         <div className="about__mission reveal">
           <div className="about__mission-line" />
           <blockquote>
-            "A reader lives a thousand lives before he dies. The man who never
-            reads lives only one."
+           “...De ki: 'Hiç bilenlerle bilmeyenler bir olur mu?' Ancak akıl sahipleri öğüt alırlar.”
           </blockquote>
-          <cite>— George R.R. Martin</cite>
+          <cite>— Zümer Suresi, 9. Ayet</cite>
           <div className="about__mission-line" />
         </div>
 
         <div className="about__cta reveal">
-          <p>Ready to start your journey?</p>
+          <p>Yolculuğunuza başlamaya hazır mısınız?</p>
           <Link to="/language" className="btn btn--outline">
-            Browse Languages →
+            Dilleri Keşfet →
           </Link>
         </div>
       </section>
 
         <footer className="footer">
             <div className="footer__brand">KTB</div>
-            <p className="footer__copy">© 2026 DIJITAL KITABISTAN. Built with ❤️ for readers everywhere.</p>
+            <p className="footer__copy">© 2026 DIJITAL KITABISTAN. Dünyanın her yerindeki okurlar için ❤️ ile hazırlandı.</p>
             <a href="mailto:contact@KTB.com" className="footer__email">contact@KTB.com</a>
       </footer>
     </div>
