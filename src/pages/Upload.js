@@ -41,25 +41,30 @@ export default function Upload() {
 
   const handleFile = (file) => {
     if (!file || file.type !== 'application/pdf') {
-      showToast('Please upload a valid PDF file.', 'error');
+      showToast('Lütfen geçerli bir PDF dosyası yükleyin.', 'error');
       return;
     }
+
     setUploading(true);
+
     const reader = new FileReader();
     reader.onload = (e) => {
       const newBook = {
         id: Date.now(),
         name: file.name.replace('.pdf', ''),
         size: (file.size / 1024).toFixed(0) + ' KB',
-        date: new Date().toLocaleDateString('en-GB'),
+        date: new Date().toLocaleDateString('tr-TR'),
         data: e.target.result,
       };
+
       const updated = [...books, newBook];
       setBooks(updated);
       saveBooks(lang, genre, updated);
+
       setUploading(false);
-      showToast(`"${newBook.name}" uploaded successfully!`);
+      showToast(`"${newBook.name}" başarıyla yüklendi!`);
     };
+
     reader.readAsDataURL(file);
   };
 
@@ -75,7 +80,7 @@ export default function Upload() {
     const updated = books.filter(b => b.id !== id);
     setBooks(updated);
     saveBooks(lang, genre, updated);
-    showToast('Book removed.', 'info');
+    showToast('Kitap silindi.', 'info');
   };
 
   const handleDownload = (book) => {
@@ -100,14 +105,20 @@ export default function Upload() {
       <section className="page-hero page-hero--upload">
         <div className="page-hero__content">
           <div className="page-hero__breadcrumb">
-            <Link to="/language">Languages</Link>
+            <Link to="/language">Diller</Link>
             <span> / </span>
             <Link to={`/language/${lang}`}>{displayLang}</Link>
             <span> / </span>
             <span>{displayGenre}</span>
           </div>
-          <h1 className="page-hero__title">{displayGenre}<br /><em>{displayLang} Books</em></h1>
-          <p className="page-hero__sub">Upload a PDF to share with the community, or click a book to download it.</p>
+
+          <h1 className="page-hero__title">
+            {displayGenre}<br /><em>{displayLang} Kitapları</em>
+          </h1>
+
+          <p className="page-hero__sub">
+            Toplulukla paylaşmak için bir PDF yükleyin veya indirmek için bir kitaba tıklayın.
+          </p>
         </div>
       </section>
 
@@ -128,15 +139,16 @@ export default function Upload() {
             style={{ display: 'none' }}
             onChange={(e) => handleFile(e.target.files[0])}
           />
+
           {uploading ? (
             <div className="dropzone__spinner" />
           ) : (
             <>
               <div className="dropzone__icon">📄</div>
               <p className="dropzone__label">
-                {dragging ? 'Drop your PDF here' : 'Drag & drop a PDF, or click to browse'}
+                {dragging ? 'PDF dosyasını buraya bırakın' : 'PDF sürükleyin veya tıklayıp seçin'}
               </p>
-              <p className="dropzone__hint">Only PDF files are accepted</p>
+              <p className="dropzone__hint">Sadece PDF dosyaları kabul edilir</p>
             </>
           )}
         </div>
@@ -145,16 +157,19 @@ export default function Upload() {
         {books.length > 0 ? (
           <div className="shelf">
             <div className="shelf__header">
-              <h2>Uploaded Books</h2>
-              <span className="shelf__count">{books.length} book{books.length !== 1 ? 's' : ''}</span>
+              <h2>Yüklenen Kitaplar</h2>
+              <span className="shelf__count">
+                {books.length} kitap
+              </span>
             </div>
+
             <div className="book-grid">
               {books.map((book) => (
                 <div
                   key={book.id}
                   className="book-card"
                   onClick={() => handleDownload(book)}
-                  title="Click to download"
+                  title="İndirmek için tıklayın"
                 >
                   <div className="book-card__spine" />
                   <div className="book-card__cover">
@@ -164,12 +179,13 @@ export default function Upload() {
                       <span>{book.size}</span>
                       <span>{book.date}</span>
                     </div>
-                    <div className="book-card__download">⬇ Download</div>
+                    <div className="book-card__download">⬇ İndir</div>
                   </div>
+
                   <button
                     className="book-card__delete"
                     onClick={(e) => handleDelete(book.id, e)}
-                    title="Remove book"
+                    title="Kitabı sil"
                   >
                     ✕
                   </button>
@@ -180,16 +196,22 @@ export default function Upload() {
         ) : (
           <div className="shelf-empty">
             <div className="shelf-empty__icon">🕮</div>
-            <p>No books yet in <strong>{displayGenre} / {displayLang}</strong>.</p>
-            <p>Be the first to upload one!</p>
+            <p>
+              <strong>{displayGenre} / {displayLang}</strong> içinde henüz kitap yok.
+            </p>
+            <p>İlk kitabı sen yükle!</p>
           </div>
         )}
       </section>
 
       <footer className="footer">
         <div className="footer__brand">KTB</div>
-        <p className="footer__copy">© 2026 DIJITAL KITABISTAN. Built with ❤️ for readers everywhere.</p>
-        <a href="mailto:contact@KTB.com" className="footer__email">contact@KTB.com</a>
+        <p className="footer__copy">
+          © 2026 DIJITAL KITABISTAN. Dünyanın her yerindeki okurlar için ❤️ ile hazırlandı.
+        </p>
+        <a href="mailto:contact@KTB.com" className="footer__email">
+          contact@KTB.com
+        </a>
       </footer>
     </div>
   );
