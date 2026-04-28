@@ -35,7 +35,7 @@ export default function Navbar() {
       <Link to="/" className="navbar__brand" onClick={() => setMenuOpen(false)}>
         {/* <span className="navbar__brand-icon">📚</span> */}
         <span className="navbar__brand-text">
-          <img src={logo}></img>
+          <img src={logo} alt="logo"></img>
         </span>
       </Link>
 
