@@ -48,7 +48,7 @@ export default function Home() {
       <section className="hero" ref={heroRef}>
         <div className="hero__noise" />
         <div className="hero__content">
-          <p className="hero__eyebrow">...</p>
+          <p className="hero__eyebrow"></p>
          
           <h1 className="hero__title">
             Geçmişin Kadim Bilgeliği,<br />
